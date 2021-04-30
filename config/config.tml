@@ -1,0 +1,47 @@
+[Server]
+ServerUrl = "localhost"
+ServerPort = 6666
+TimeFormat = "2021-04-06 14:56:37"
+Charset = "utf-8"
+AccessLog = "D:/Code/Go/src/iris_project_foundation/logs/access"
+ErrorLog = "D:/Code/Go/src/iris_project_foundation/logs/error"
+
+[App]
+Secret = "development-secret-key"
+LogLevel = "debug"
+DefaultPageSize = 10
+
+# 是否开启RefreshToken,如果开启需要配置RefreshTokenExpiration
+TokenPair = false
+# token过期时间(分钟)
+AccessTokenExpiration = 360
+RefreshTokenExpiration = 1440
+# 是否开启Blocklist
+Blocklist = true
+BlocklistPrefix = "JWTBL:"
+
+# 延时执行器的调度间隔(毫秒)
+ScheduleInterval = 1000
+
+# 订单锁前缀
+OrderLockPrefix = "OrderLock:"
+# 订单有效时间(分钟)
+OrderExpiration = 30
+
+[Wechat]
+Code2Session = "https://api.weixin.qq.com/sns/jscode2session"
+WechatAppID = "wxc77711bc431cce8d"
+WechatSecret = "7321058a463834d86f09ba207db4df44"
+
+[Database]
+Type = "mysql"
+User = "root"
+Password = "lf1222"
+Host = "localhost:3306"
+Name = "iris_foundation"
+
+[Redis]
+Addr = "localhost:6379"
+Password = ""
+# 0 ~ 14
+DB = 0
